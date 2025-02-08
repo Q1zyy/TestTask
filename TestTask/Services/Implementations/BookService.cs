@@ -24,7 +24,7 @@ namespace TestTask.Services.Implementations
 
         public async Task<List<Book>> GetBooks()
         {
-            var date = new DateTime(2012, 5, 25); // za sabaton +rep
+            var date = new DateTime(2012, 5, 25);
             return await _context.Books
                 .Where(b => b.Title.Contains("Red") && b.PublishDate > date)
                 .ToListAsync();
